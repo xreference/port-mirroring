@@ -15,7 +15,7 @@ Different to the "TEE" target of iptables, "port-mirroring" encapsulates a whole
 "TEE" format mirroring is added in version 1.3. Since version 1.3, you can choose "TEE" or "TZSP" as the mirroring protocol.
 
 "TEE" or "TZSP"
-"TEE" is an iptables routing target. It allows you to forward packets to another host. Iptables simply modifies the ethernet header of the original packets to the target host's MAC address. Therefore, you can not get the original source and destination mac addresses. Also, the target host must be in the same subnet as the mirroring source.
+ "TEE" is an iptables routing target. It allows you to forward packets to another host. Iptables simply modifies the ethernet header of the original packets to the target host's MAC address. Therefore, you can not get the original source and destination mac addresses. Also, the target host must be in the same subnet as the mirroring source.
 
 "TZSP" encapsulates a whole packet and forwards packets in udp protocol. Therefore the target host does not need to be in a same subnet. However, since a "TZSP" header is appended in each packet, your sniffer shall be able to strip "TZSP" headers to get the original packets. As I know, wireshark can do this.
 
